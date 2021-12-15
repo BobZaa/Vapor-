@@ -10,8 +10,13 @@
 
 </head>
 <body>
-<header></header>
-<footer></footer>
-</div>
+
+  <header>
+    <img src="/logo.svg" class="logo" alt="Vapor Logo"> 
+  </header>
+
+  <footer>
+  
+  </footer>
 </body> 
 </html>
