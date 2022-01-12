@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 14pt;
+    font-family: motiva-sans, sans-serif;
 }
 
 body {
@@ -29,10 +30,14 @@ nav {
 
 nav > a {
     margin: 0 1rem;
+    color: #EE2757;
+    text-decoration: none;
 }
 
 .login-btn {
     margin: 1rem 2rem;
+    color: #EE2757;
+    text-decoration: none;
 }
 
 main {
