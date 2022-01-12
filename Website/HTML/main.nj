@@ -24,7 +24,8 @@
     <p>This is main content.</p>
   </main>
   <footer>
-    <p>2021 Vapor. All rights reserved. All trademarks are property of their respective owners in the US and other countries.</p>
+    <p>
+    2021 Vapor. All rights reserved. All trademarks are property of their respective owners in the US and other countries.</p>
   </footer>
 </body> 
 </html>
