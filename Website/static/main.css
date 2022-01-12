@@ -28,16 +28,19 @@ footer {
     left: 2px;
 }
 
-p1 {
-position : absolute
+.p1 {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.p2 {
 
 }
 
-p2 {
-
-}
-
-p3 {
+.p3 {
 
 
 }
