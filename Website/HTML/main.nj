@@ -14,9 +14,9 @@
   <header>
     <img src="/logo.svg" class="logo" alt="Vapor Logo">
     <nav>
-      <a href="/store">store</a>
-      <a href="/library">library</a>
-      <a href="/about">about</a>
+      <a href="/store">STORE</a>
+      <a href="/library">LIBRARY</a>
+      <a href="/about">ABOUT</a>
     </nav>
     <a href="" class="login-btn">Log in</a>
   </header>
