@@ -42,8 +42,11 @@ main {
 footer {
     background-color: #CFC9BA;
     height: 10vh;
+    font-size: 16px;
 }
 
 .logo {
-    height: 2rem;
+    height: 4rem;
+    position: absolute;
+    left: -12vh;
 }
