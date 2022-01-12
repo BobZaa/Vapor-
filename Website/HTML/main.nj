@@ -12,7 +12,11 @@
 <body>
 
   <header>
-    <img src="/logo.svg" class="logo" alt="Vapor Logo"> 
+    <img src="/logo.svg" class="logo" alt="Vapor Logo">
+
+    <p class = "p1">STORE</p>
+    <p class = "p2">"LIBRARY</p>
+    <p class = "p3">ABOUT</p>
   </header>
 
   <footer>
