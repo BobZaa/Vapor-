@@ -47,11 +47,13 @@ main {
 footer {
     background-color: #CFC9BA;
     height: 10vh;
+    text-align: center;
     font-size: 16px;
 }
 
 .logo {
     height: 4rem;
     position: absolute;
-    left: -12vh;
+    left: -5vh;
+    top: -2.4vh;
 }
