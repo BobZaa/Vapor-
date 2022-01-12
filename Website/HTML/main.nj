@@ -13,10 +13,12 @@
 
   <header>
     <img src="/logo.svg" class="logo" alt="Vapor Logo">
+<div class="container">
+    <div class = "p1">STORE
+    <div class = "p2">"LIBRARY
+    <div class = "p3">ABOUT
+</div>
 
-    <p class = "p1">STORE</p>
-    <p class = "p2">"LIBRARY</p>
-    <p class = "p3">ABOUT</p>
   </header>
 
   <footer>
