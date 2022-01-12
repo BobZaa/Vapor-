@@ -15,6 +15,7 @@ header {
     background-color: #CFC9BA;
     display: flex;
     justify-content: center;
+    height: 10vh;
 }
 
 .logo {
@@ -34,8 +35,13 @@ nav > a {
     margin: 1rem 2rem;
 }
 
+main {
+    height: 80vh;
+}
+
 footer {
     background-color: #CFC9BA;
+    height: 10vh;
 }
 
 .logo {
