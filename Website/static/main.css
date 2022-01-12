@@ -22,5 +22,8 @@ footer {
 }
 
 .logo {
-    top: 10%;
+    height: 70px;
+    position: fixed;
+    top: 3px;
+    left: 2px;
 }
