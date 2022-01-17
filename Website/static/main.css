@@ -7,15 +7,17 @@
 }
 
 body {
-    background-color: #E8E5DE; 
+    background-color: #E8E5DE;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 
 header {
-    height: fit-content;
+    height: 4rem;
     background-color: #CFC9BA;
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
     padding: .4rem .8rem;
 
@@ -24,14 +26,9 @@ header {
 
 .logo {
     height: 3rem;
-    padding-right: 28%;
+    padding-right: 2rem;
 }
 
-/* nav {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-} */
 
 .nav-links {
     margin: 0 1rem;
@@ -50,15 +47,15 @@ header {
 }
 
 main {
-    min-height: 80vh;
 }
 
 footer {
+    margin-top: auto;
     background-color: #CFC9BA;
-    height: fit-content;
+    height: 4rem;
     text-align: center;
     font-weight: 200;
     color: #806F60;
-    padding: 4.4vh;
+    padding: 1.5rem;
     font-size: 1rem;
 }
