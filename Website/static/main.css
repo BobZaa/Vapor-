@@ -80,25 +80,34 @@ form {
     flex-direction: column;
     width: min(80vw, 45ch);
     align-items: center;
+    background-color: #D9D2C7;
 }
 
 form > h1 {
     font-weight: 200;
     font-size: 3.5rem;
-    padding: 2rem;
     color: #471F00;
+}
 
+label {
+    margin-top: 1rem;
 }
 
 input {
-    padding: .66rem 6rem;
+    margin: .5rem 0;
+    padding: .5rem .75rem;
     color: #471F00;
-
+    background-color: #E8E5DE;
+    border: 2px solid #471F00;
+    border-radius: .5rem;
+    width: 100%;
 }
 
 input[type=submit] {
+    padding: .5rem 2rem;
     width: max-content;
-    color: #471F00;
-    
+    color: #E8E5DE;
+    background-color: #EE2757;
+    border-color: #EE2757;
 }
 
