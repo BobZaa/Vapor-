@@ -44,6 +44,10 @@ header {
     text-align: center;
 }
 
+main {
+
+}
+
 footer {
     margin-top: auto;
     padding: 1.5rem;
@@ -97,3 +101,4 @@ input[type=submit] {
     color: #471F00;
     
 }
+
