@@ -20,8 +20,6 @@ header {
     display: flex;
     align-items: center;
     padding: .4rem .8rem;
-
-    position: relative;
 }
 
 .logo {
