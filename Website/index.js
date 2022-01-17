@@ -17,6 +17,13 @@ server.get(
     }
 )
 
+server.get( 
+   '/login',
+   (req, res) => {
+       res.render("login.nj")
+   }
+)
+
 server.listen(
    12345, 
    () => {

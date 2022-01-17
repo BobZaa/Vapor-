@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://use.typekit.net/vmm3koo.css">  
 </head>
 <body>
-
   <header>
     <img src="/logo.svg" class="logo" alt="Vapor Logo">
     <nav>
@@ -18,7 +17,7 @@
       <a href="/library" class="nav-links">LIBRARY</a>
       <a href="/about" class="nav-links">ABOUT</a>
     </nav>
-    <a href="" class="login-btn">Log in</a>
+    <a href="/login" class="login-btn">Log in</a>
   </header>
   <main>
     <p>This is main content.</p>

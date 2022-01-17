@@ -44,16 +44,56 @@ header {
     text-align: center;
 }
 
-main {
-}
-
 footer {
     margin-top: auto;
-    background-color: #CFC9BA;
-    height: 4rem;
-    text-align: center;
-    font-weight: 200;
-    color: #806F60;
     padding: 1.5rem;
+    height: 4rem;
+
+    color: #806F60;
+    background-color: #CFC9BA;
+    text-align: center;
     font-size: 1rem;
+    font-weight: 200;
+}
+
+
+
+
+
+
+
+
+
+.form-container {
+    display: grid;
+    place-items: center;
+    margin: auto 0;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: min(80vw, 45ch);
+    align-items: center;
+}
+
+form > h1 {
+    font-weight: 200;
+    font-size: 3.5rem;
+    padding: 2rem;
+    color: #471F00;
+
+}
+
+input {
+    padding: .66rem 6rem;
+    color: #471F00;
+
+}
+
+input[type=submit] {
+    width: max-content;
+    color: #471F00;
+    
 }
