@@ -15,23 +15,14 @@ header {
     height: fit-content;
     background-color: #CFC9BA;
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
     padding: .4rem .8rem;
-
-    position: relative;
 }
 
 .logo {
     height: 3rem;
-    padding-right: 28%;
+    padding-right: 2rem;
 }
-
-/* nav {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-} */
 
 .nav-links {
     margin: 0 1rem;
