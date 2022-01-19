@@ -1,0 +1,63 @@
+:root, *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 12pt;
+    font-family: motiva-sans, sans-serif;
+}
+
+body {
+    background-color: #E8E5DE;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+header {
+    height: 4rem;
+    background-color: #CFC9BA;
+    display: flex;
+    align-items: center;
+    padding: .4rem .8rem;
+}
+
+.logo {
+    height: 3rem;
+    width: fit-content;
+    padding-right: 1rem;
+    display: block;
+}
+
+.logo > img {
+    width: auto;
+    height: 100%;
+}
+
+.nav-links {
+    margin: 0 1rem;
+    color: #EE2757;
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 1.5rem;  
+}
+
+.login-btn {
+    margin-left: auto;
+    color: #EE2757;
+    text-decoration: none;
+    font-weight: 200;
+    text-align: center;
+}
+
+footer {
+    margin-top: auto;
+    padding: 1.5rem;
+    height: 4rem;
+
+    color: #806F60;
+    background-color: #CFC9BA;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 200;
+}
