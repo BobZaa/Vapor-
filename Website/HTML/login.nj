@@ -16,14 +16,15 @@
     <div class="form-container">
         <form action="/auth/login" method="post">
             <h1>LOGIN</h1>
-            <label for="username">Username:</label>
+            <label for="username">USERNAME</label>
             <input type="text" name="username">
 
             
-            <label for="password">Password:</label>
+            <label for="password">PASSWORD</label>
             <input type="password" name="password">
 
-            <input type="submit" value="Log in!">
+            <input type="submit" value="Login">
+            <a href="/register">Register instead</a>
         </form>
     </div>
 </body>
