@@ -1,0 +1,45 @@
+main {
+    display: grid;
+    place-items: center;
+    margin: auto 0;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: min(80vw, 45ch);
+    align-items: center;
+    background-color: #D9D2C7;
+}
+
+form > h1 {
+    font-weight: 200;
+    font-size: 3.5rem;
+    padding: 2rem;
+    color: #471F00;
+}
+
+label {
+    margin-top: 1rem;
+}
+
+input {
+    padding: .66rem 6rem;
+    color: #471F00;
+    margin: .5rem 0;
+    background-color: #E8E5DE;
+    border: 2px solid #471F00;
+    border-radius: .5rem;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+}
+
+input[type=submit] {
+    width: max-content;
+    color: #471F00;
+    padding: .5rem 2rem;
+    background-color: #EE2757;
+    border-color: #EE2757;
+}
