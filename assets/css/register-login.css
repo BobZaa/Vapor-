@@ -13,7 +13,8 @@ form {
 
     background-color: #D9D2C7;
     border-radius: 1rem;
-    box-shadow: #CFC9BA 0 .3rem .3rem;
+    box-shadow: #9F795A5A 0 .2rem .4rem .2rem;
+    /* CFC9BA */
 }
 
 form > h1 {
