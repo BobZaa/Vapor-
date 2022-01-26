@@ -1,9 +1,14 @@
 const nunjucks = require ('nunjucks')
 const express = require ('express')
 const getLogger = require('./modules/log/index.js')
+const { setup: databaseSetup } = require('./modules/database/index.js')
 
 const SERVER = express()
-const log = getLogger("MAIN")
+const log = getLogger("  MAIN  ")
+
+log("Starting up the server...")
+
+databaseSetup()
 
 nunjucks.configure(
     'views',
