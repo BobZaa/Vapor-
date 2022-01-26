@@ -1,0 +1,1 @@
+nodemon.cmd -e njk,js,json

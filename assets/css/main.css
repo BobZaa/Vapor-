@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-size: 12pt;
     font-family: motiva-sans, sans-serif;
+    color: #471F00;
 }
 
 body {
@@ -12,7 +13,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 
 header {
     height: 4rem;
@@ -35,12 +35,12 @@ header {
 }
 
 .nav-links {
-    margin: 0 1rem;
+    margin: 0 1.5rem;
     color: #EE2757;
     text-decoration: none;
     font-weight: 200;
     font-size: 1.5rem;  
-}
+}   
 
 .login-btn {
     margin-left: auto;
@@ -50,8 +50,12 @@ header {
     text-align: center;
 }
 
+main {
+    width: 100%;
+    margin: auto 0;
+}
+
 footer {
-    margin-top: auto;
     padding: 1.5rem;
     height: 4rem;
 

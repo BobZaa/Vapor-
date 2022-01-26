@@ -5,16 +5,18 @@
 {% endblock %}
 
 {% block main %}
-    <form action="/api/auth/login" method="post">
-        <h1>LOGIN</h1>
+    <form action="/api/auth/register" method="post">
+        <h1>REGISTER</h1>
         <label for="username">USERNAME</label>
         <input type="text" name="username">
 
-        
         <label for="password">PASSWORD</label>
         <input type="password" name="password">
 
-        <input type="submit" value="Login">
-        <a href="/register">Register instead</a>
+        <label for="password">REPEAT PASSWORD</label>
+        <input type="password" name="password">
+
+        <input type="submit" value="Register">
+        <a href="/login">Login instead</a>
     </form>
 {% endblock %}
