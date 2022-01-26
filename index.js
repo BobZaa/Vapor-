@@ -1,7 +1,9 @@
 const nunjucks = require ('nunjucks')
 const express = require ('express')
+const getLogger = require('./modules/log/index.js')
 
 const SERVER = express()
+const log = getLogger("MAIN")
 
 nunjucks.configure(
     'views',
@@ -12,8 +14,6 @@ nunjucks.configure(
 )
 
 SERVER.use('/assets', express.static('assets'))
-
-// SERVER.get('/', (req, res) => res.redirect('/app'))
 SERVER.use('/', require('./modules/url2njk/index.js'))
 
-SERVER.listen(12345, () => console.log("Server has starded"))
+SERVER.listen(process.env.PORT ?? 12345, () => log(`Server has starded on http://localhost:${process.env.PORT ?? 12345}.`))
