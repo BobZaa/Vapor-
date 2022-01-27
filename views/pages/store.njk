@@ -1,5 +1,15 @@
 {% extends "templates/base.njk" %}
 
+{%block head %}
+<link rel="stylesheet" type="text/css" href="/assets/css/store.css">
+{% endblock %}
+
 {% block main %}
-    <h1>Store!</h1>
+    <div class="store-preview">
+        <span class="material-icons arrow">navigate_before</span>
+        <div class="box">
+        <p> Sample text</p>   
+        </div>
+        <span class="material-icons arrow">navigate_next</span>
+    </div>    
 {% endblock %}

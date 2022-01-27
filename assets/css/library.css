@@ -1,0 +1,43 @@
+main {
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.box {
+    height: 35rem;
+    background-color: #D9D2C7;
+    border-radius: 1rem;
+    box-shadow: #CFC9BA 0 .3rem .3rem;
+}
+
+.games-list {
+    width: 25%;
+}
+
+.game-info {
+    width: 69%;
+}
+
+.games-footer {
+    margin-top: 14rem;
+    height: 3.5rem;
+    background-color: #CFC9BA;  
+    border-radius: 0;
+    box-shadow: none;
+
+
+
+}
+
+.button {
+    width: max-content;
+    padding: .75rem 2.5rem;
+    color: #F1B9C7;
+    background-color: #EE2757;
+    cursor: pointer;
+    border-radius: .25rem;
+    border: none;
+    margin: .5rem;
+
+
+}
