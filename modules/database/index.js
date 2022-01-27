@@ -1,11 +1,11 @@
-import { MongoClient } from 'mongodb'
+import { Db, MongoClient } from 'mongodb'
 import getLogger from '../log/index.js'
 import colors from 'colors'
 
 const log = getLogger('Database', "blue")
 
 /**
- * @type {MongoClient}
+ * @type {Db}
  */
 export let db = null
 
@@ -20,7 +20,7 @@ export async function setup () {
     const Client = new MongoClient(process.env.MONGO_URI)
     await Client.connect()
 
-    db = Client
+    db = Client.db(process.env.MONGO_DB_NAME ?? 'vapor')
 
     log("Loaded database!")
 }
