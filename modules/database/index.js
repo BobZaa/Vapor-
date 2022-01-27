@@ -1,24 +1,26 @@
-const SQLite = require('better-sqlite3')
-const getLogger = require('../log/index.js')
+import { MongoClient } from 'mongodb'
+import getLogger from '../log/index.js'
+import colors from 'colors'
 
 const log = getLogger('Database', "blue")
 
 /**
- * @type {SQLite.Database}
+ * @type {MongoClient}
  */
-module.exports.db = null
+export let db = null
 
-module.exports.setup = () => {
+export async function setup () {
     log("Starting up databases...")
 
-    const database = new SQLite('./data/database.sqlite')
-    database.pragma('journal_mode = WAL')
-    database.unsafeMode()
+    if (!process.env.MONGO_URI) {
+        log("ERROR:".red + " No URI for the database!")
+        process.exit(1)
+    }
 
-    const isCreated = database.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name='setup';").get() ?? false
-    if (!isCreated)
-        require('./createInitialDatabase.js').setup(database, log)
+    const Client = new MongoClient(process.env.MONGO_URI)
+    await Client.connect()
 
-    module.exports.db = database
+    db = Client
+
     log("Loaded database!")
 }
