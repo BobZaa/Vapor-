@@ -16,14 +16,14 @@ auth.post(
         const { username, password, passwordRepeat } = req.body
 
         if (!username || !password || !passwordRepeat)
-            return res.redirect('/register?err=ERR_MISSING_PARAMS')
+            return res.redirect(`/register?err=ERR_MISSING_PARAMS&un=${username}`)
 
         if (password !== passwordRepeat)
-            return res.redirect('/register?err=ERR_PASSWORD_NO_MATCH')
+            return res.redirect(`/register?err=ERR_PASSWORD_NO_MATCH&un=${username}`)
 
         // You shouldn't be able to create two accounts with the same name!
         if (await db.collection('users').findOne({ username }))
-            return res.redirect('/register?err=ERR_USER_EXISTS')
+            return res.redirect(`/register?err=ERR_USER_EXISTS&un=${username}`)
 
         const hash = await bcrypt.hash(password, 12)
         const user = User(username, hash)
@@ -41,12 +41,15 @@ auth.post(
         const { username, password } = req.body
 
         if (!username || !password)
-            return res.send("Missing parameters: username and/or password")
+            return res.redirect(`/login?err=ERR_MISSING_PARAMS&un=${username}`)
 
         const user = await db.collection('users').findOne({ username })
 
+        if (!user)
+            return res.redirect(`/login?err=ERR_USER_NO_EXISTS&un=${username}`)
+
         if (!await bcrypt.compare(password, user.password))
-            return res.send("Incorrect password!")
+            return res.redirect(`/login?err=ERR_PASSWORD_INCORRECT&un=${username}`)
 
         delete user.password
 

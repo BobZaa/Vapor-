@@ -7,10 +7,14 @@
 {% block main %}
     <form action="/api/auth/login" method="post">
         <h1>LOGIN</h1>
+        {% if error %}
+            <p class="error">
+                <b>ERROR:</b> {{ errorMessage }}
+            </p>
+        {% endif %}
         <label for="username">USERNAME</label>
-        <input type="text" name="username">
+        <input type="text" name="username" value="{{ username }}">
 
-        
         <label for="password">PASSWORD</label>
         <input type="password" name="password">
 
