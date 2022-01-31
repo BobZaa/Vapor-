@@ -3,6 +3,20 @@ main {
     place-items: center;
 }
 
+p {
+    text-align: center;
+}  
+
+.box{
+    display: flex;
+    padding: 8rem;
+    background-color: #D9D2C7;
+    width: 95%;
+    align-items: center;    
+    border-radius: 1rem;
+}
+
+
 form {
     display: flex;
     flex-direction: column;
@@ -13,8 +27,7 @@ form {
 
     background-color: #D9D2C7;
     border-radius: 1rem;
-    box-shadow: #9F795A5A 0 .2rem .4rem .2rem;
-    /* CFC9BA */
+    box-shadow: #CFC9BA 0 .3rem .3rem;
 }
 
 form > h1 {
@@ -28,7 +41,6 @@ form > a {
     color: #EE2757;
     margin: 1rem 0;
     text-decoration: none;
-    font-weight: 200;
 }
 
 label {
