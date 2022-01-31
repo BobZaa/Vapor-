@@ -1,3 +1,11 @@
+/**
+ * This script automatically loads and renders appropriate templates from the requested url.
+ * If a user connectes to /about/our-story the script would check for hese files in thhis order:
+ *  1. views/pages/about/our-story.njk
+ *  2. views/pages/about/our-stoy/index.njk
+ * 
+ * If no file is found, and no override or alternative handler exits, the script will return a 404 not found error.
+ */
 import { Router } from 'express'
 import fs from 'fs'
 import overrides from '../../routes/overrides.js'

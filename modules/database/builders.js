@@ -1,3 +1,6 @@
+/**
+ * This script is a collection of 'builders' - functions that create basic entities for the database.
+ */
 import { ObjectId } from 'mongodb'
 
 /**
@@ -31,10 +34,10 @@ export function User(username, hash) {
 /**
  * This function generates a new publisher. (It does not store it in the database.)
  * @param {string} publisher
- * @param {string} password
+ * @param {string} hash
  * @returns {Publisher}
  */
- export async function Publisher(publisher, password) {
+ export async function Publisher(publisher, hash) {
     return {
         publisher,
         password: hash,

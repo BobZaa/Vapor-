@@ -6,7 +6,7 @@ import colors from 'colors'
  */
 
 /**
- * This function creates logger.
+ * This function creates logger - A function that auto-prefixes log messages.
  * @param {string} prefix The prefix of the logger. I.e. MAIN, DATABASE, ETC.
  * @returns {Logger}
  */
