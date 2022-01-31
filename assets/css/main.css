@@ -20,6 +20,7 @@ header {
     display: flex;
     align-items: center;
     padding: .4rem .8rem;
+    box-shadow: #8F795860 0 .2rem .2rem;
 }
 
 .logo {
@@ -67,7 +68,6 @@ footer {
     text-align: center;
     font-size: 1rem;
     font-weight: 200;
-
 }
 
 .material-icons {

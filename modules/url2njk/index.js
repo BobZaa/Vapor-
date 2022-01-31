@@ -1,5 +1,5 @@
-const { Router } = require('express')
-const fs = require('fs')
+import { Router } from 'express'
+import fs from 'fs'
 
 const routes = Router()
 
@@ -16,4 +16,4 @@ routes.get(
     }
 )
 
-module.exports = routes
+export default routes
