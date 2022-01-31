@@ -1,7 +1,10 @@
 import { Router } from 'express'
 import fs from 'fs'
+import overrides from '../../routes/overrides.js'
 
 const routes = Router()
+
+routes.use('/', overrides)
 
 routes.get(
     '/*',

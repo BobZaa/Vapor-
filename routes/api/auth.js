@@ -16,14 +16,14 @@ auth.post(
         const { username, password, passwordRepeat } = req.body
 
         if (!username || !password || !passwordRepeat)
-            return res.send("Missing parameter: username, password, and/or passwordRepeat")
+            return res.redirect('/register?err=ERR_MISSING_PARAMS')
 
         if (password !== passwordRepeat)
-            return res.send("Passwords do not match!")
+            return res.redirect('/register?err=ERR_PASSWORD_NO_MATCH')
 
         // You shouldn't be able to create two accounts with the same name!
         if (await db.collection('users').findOne({ username }))
-            return res.send("That user already exists!")
+            return res.redirect('/register?err=ERR_USER_EXISTS')
 
         const hash = await bcrypt.hash(password, 12)
         const user = User(username, hash)
