@@ -26,4 +26,6 @@ for (const overrideFile of overrideFiles)
             err => log(`Error encountered while loading ${overrideFile}:\n${err}`)
         )
 
+overrides.get('/', (req, res) => res.redirect('/store'))
+
 export default overrides
