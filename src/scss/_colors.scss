@@ -1,0 +1,26 @@
+:root {
+    --primary: #EE2757;
+    --surface: #E8E5DE;
+    --standout: #CFC9BA;
+    --text: #471F00;
+}
+
+$primary: var(--primary);
+$surface: var(--surface);
+$stadnout: var(--standout);
+$text: var(--text);
+
+$raw_primary: #EE2757;
+$raw_surface: #E8E5DE;
+$raw_stadnout: #CFC9BA;
+$raw_text: #471F00;
+
+@each $color in primary, surface, standout, text {
+    .#{$color} {
+        color: var(--$color)
+    }
+
+    .bg-#{$color} {
+        background-color: var(--$color)
+    }
+}

@@ -1,0 +1,25 @@
+@use 'colors' as clr;
+
+@mixin box($direction: row) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+
+    margin: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+
+    * {
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+}
+
+.box, .box-v {
+    @include box();
+}
+
+.box-h {
+    @include box(column);
+}

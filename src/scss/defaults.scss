@@ -1,0 +1,62 @@
+@use "colors" as clr;
+
+// Set defaults.
+:root, *, *:root, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: motiva-sans, Arial, Helvetica, sans-serif;
+    color: clr.$text;
+}
+
+body {
+    background-color: clr.$surface;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    background-color: clr.$stadnout;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    margin-top: auto;
+    justify-content: center;
+    
+    > p {
+        font-size: .75rem;
+    }
+}
+
+img.logo {
+    height: 2.5rem;
+    margin-right: 1.5rem
+}
+
+nav {
+    margin-right: auto;
+
+    > a {
+        margin: 0 1rem;
+        padding: .15rem .5rem;
+        color: clr.$primary;
+        text-decoration: none transparent;
+        font-weight: 200;
+        font-size: 1.5rem;
+
+        border-bottom: .1rem solid transparent;
+        transition: border-color .3s;
+
+        &:hover {
+            border-color: clr.$primary;
+        }
+    }
+}
+
+.material-icons {
+    user-select: none;
+}

@@ -5,9 +5,11 @@ import { config as getEnv } from 'dotenv'
 import express from 'express'
 import nunjucks from 'nunjucks'
 import getLogger from './modules/log/index.js'
+import sass from 'sass'
 import { setup as databaseSetup } from './modules/database/index.js'
 import url2njk from './modules/url2njk/index.js'
 import api from './routes/api.js'
+import { writeFileSync } from 'fs'
 
 const SERVER = express()
 const log = getLogger("  MAIN  ", "green")
@@ -24,6 +26,21 @@ nunjucks.configure(
         express: SERVER
     }
 )
+
+log("Rendering SCSS...")
+const css = sass.compile(
+    "./src/scss/main.scss",
+    {
+        sourceMap: false,
+        alertColor: true,
+        style: "compressed"
+    }
+)
+writeFileSync(
+    "./assets/css/main.css",
+    // Meh... Didn't find a betetr fix.
+    css.css.replace(/var\(-- /g, 'var(--'))
+log("Rendering done!")
 
 SERVER.use(bodyParser.urlencoded({ extended: true }))
 SERVER.use(bodyParser.json())

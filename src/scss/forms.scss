@@ -1,0 +1,32 @@
+@use "colors" as clr;
+@use "boxes";
+
+form {
+    @include boxes.box(column);
+
+    h1, label, input, a {
+        font-weight: 200;
+        font-size: 1.75rem;
+        margin: 1rem 0;
+    }
+
+    label {
+        font-size: 1rem;
+        margin: 1rem 0 0 0;
+    }
+
+    input {
+        margin: .5rem 0;
+        padding: .5rem 1rem;
+
+        width: 45ch;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    a {
+        color: clr.$primary;
+        font-size: .75rem;
+        margin: .5rem 0;
+    }
+}
