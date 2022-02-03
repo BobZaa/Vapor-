@@ -7,7 +7,6 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     width: min(80vw, 60ch);
     padding: 1rem 5rem;
 
@@ -67,3 +66,12 @@ input[type=submit] {
     cursor: pointer;
 }
 
+.error, .error > b {
+    font-size: 1rem;
+    color: #471F00;
+    font-weight: 200;
+}
+
+.error {
+    margin-bottom: .6em;
+}
