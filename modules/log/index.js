@@ -1,3 +1,4 @@
+
 import colors from 'colors'
 
 /**
@@ -6,8 +7,8 @@ import colors from 'colors'
  */
 
 /**
- * This function creates logger.
- * @param {string} prefix The prefix of the logger. I.e. ain't no way.
+ * This function creates logger - A function that auto-prefixes log messages.
+ * @param {string} prefix The prefix of the logger. I.e. MAIN, DATABASE, ETC.
  * @returns {Logger}
  */
 export default function getLogger(prefix, color="red") {

@@ -10,6 +10,13 @@ const SECRET = process.env.JWT_SECRET ?? crypto.generateKeySync("aes", { length:
 const auth = Router()
 const log = getLogger("  Auth  ", "red")
 
+/**
+ * This route handles registering a user.
+ * It error ahdnles:
+ * 1. Missing parts of the request.
+ * 2. Password and passwordRepeat not matching.
+ * 3. Username already existing in database.
+ */
 auth.post(
     '/register',
     async (req, res) => {
@@ -35,6 +42,9 @@ auth.post(
     }
 )
 
+/**
+ * This route logs a user in and gives said user a cookie with an API token.
+ */
 auth.post(
     '/login',
     async (req, res) => {
