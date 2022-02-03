@@ -1,4 +1,5 @@
 import bodyParser from 'body-parser'
+import chokidar from 'chokidar'
 import cookieParser from 'cookie-parser'
 import crypto from 'crypto'
 import { config as getEnv } from 'dotenv'
@@ -22,25 +23,34 @@ await databaseSetup()
 nunjucks.configure(
     'views',
     {
-        autoescape: true, 
-        express: SERVER
+        autoescape: true,
+        lstripBlocks: true,
+        trimBlocks: true,
+        express: SERVER,
+        watch: true
     }
 )
 
-log("Rendering SCSS...")
-const css = sass.compile(
-    "./src/scss/main.scss",
-    {
-        sourceMap: false,
-        alertColor: true,
-        style: "compressed"
-    }
-)
-writeFileSync(
-    "./assets/css/main.css",
-    // Meh... Didn't find a betetr fix.
-    css.css.replace(/var\(-- /g, 'var(--'))
-log("Rendering done!")
+
+const logSCSS = getLogger("  SCSS  ", "yellow")
+chokidar.watch('./src/scss').on("change", () => {
+    logSCSS("SCSS changed; compiling it...")
+
+    const css = sass.compile(
+        "./src/scss/main.scss",
+        {
+            sourceMap: false,
+            alertColor: true,
+            style: "compressed"
+        }
+    )
+
+    writeFileSync(
+        "./assets/css/main.css",
+        // Meh... Didn't find a betetr fix.
+        css.css.replace(/var\(-- /g, 'var(--'))
+    logSCSS("Rendering done!")
+})
 
 SERVER.use(bodyParser.urlencoded({ extended: true }))
 SERVER.use(bodyParser.json())

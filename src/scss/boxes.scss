@@ -17,9 +17,13 @@
 }
 
 .box, .box-v {
-    @include box();
+    @include box(column);
 }
 
 .box-h {
-    @include box(column);
+    @include box(row);
+}
+
+.box-full-width {
+    width: 100%;
 }

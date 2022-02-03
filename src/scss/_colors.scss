@@ -1,19 +1,19 @@
 :root {
-    --primary: #EE2757;
-    --surface: #E8E5DE;
-    --standout: #CFC9BA;
-    --text: #471F00;
+    --primary: #F1557A;
+    --surface: #130808;
+    --standout: #231818;
+    --text: #EEDEDE;
 }
 
 $primary: var(--primary);
 $surface: var(--surface);
-$stadnout: var(--standout);
+$standout: var(--standout);
 $text: var(--text);
 
-$raw_primary: #EE2757;
-$raw_surface: #E8E5DE;
-$raw_stadnout: #CFC9BA;
-$raw_text: #471F00;
+$raw_primary: #F1557A;
+$raw_surface: #130808;
+$raw_standout: #231818;
+$raw_text: #EEDEDE;
 
 @each $color in primary, surface, standout, text {
     .#{$color} {
