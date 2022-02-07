@@ -37,7 +37,7 @@ export function User(username, hash) {
  * @param {string} hash
  * @returns {Publisher}
  */
- export async function Publisher(publisher, hash) {
+ export function Publisher(publisher, hash) {
     return {
         publisher,
         password: hash,

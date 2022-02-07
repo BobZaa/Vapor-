@@ -1,11 +1,7 @@
 {% extends "templates/base.njk" %}
 
-{% block head %}
-    <link rel="stylesheet" type="text/css" href="/assets/css/register-login.css">
-{% endblock %}
-
 {% block main %}
-    <form action="/api/auth/register" method="post">
+    <form class="bg-standout" action="/api/auth/register" method="post">
         <h1>REGISTER</h1>
         {% if error %}
             <p class="error">

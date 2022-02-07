@@ -1,0 +1,55 @@
+@use "colors" as clr;
+@use "boxes";
+
+form {
+    @include boxes.box(column);
+
+    h1, label, input, a {
+        font-weight: 200;
+        font-size: 1.75rem;
+        margin: 1rem 0;
+    }
+
+    label {
+        font-size: 1rem;
+        margin: 1rem 0 0 0;
+    }
+
+    input {
+        margin: .5rem 0;
+        padding: .5rem 1rem;
+
+        background-color: clr.$surface;
+        border: 1px solid clr.$text;
+        border-radius: .5rem;
+        outline: 1px solid transparent;
+
+        width: 45ch;
+        text-align: center;
+        font-size: 1rem;
+
+        transition: border .3s, outline .3s;
+
+        &:hover, &:active, &:focus {
+            border-color: clr.$primary;
+        }
+
+        &:active, &:focus {
+            outline: 1px solid clr.$primary;
+        }
+    }
+
+    input[type="submit"] {
+        color: clr.$surface;
+        background-color: clr.$primary;
+        border-color: clr.$primary;
+        width: max-content;
+        cursor: pointer;
+    }
+
+    a {
+        color: clr.$primary;
+        font-size: .75rem;
+        margin: .5rem 0;
+    }
+}

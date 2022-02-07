@@ -1,0 +1,75 @@
+@use "colors" as clr;
+
+// Set defaults.
+:root, *, *:root, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: motiva-sans, Arial, Helvetica, sans-serif;
+    color: clr.$text;
+}
+
+body {
+    background-color: clr.$surface;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    background-color: clr.$standout;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    margin-top: auto;
+    justify-content: center;
+    
+    > p {
+        font-size: .75rem;
+    }
+}
+
+img.logo {
+    height: 2.5rem;
+    margin-right: 1.5rem
+}
+
+header a {
+    margin: 0 1rem;
+    padding: .15rem .5rem;
+    width: max-content;
+
+    text-decoration: none transparent;
+    font-weight: 200;
+    font-size: 1.5rem;
+
+    color: clr.$primary;
+    border-bottom: 1px solid transparent;
+    transition: border-color .3s;
+
+    &:hover {
+        border-color: clr.$primary;
+    }
+}
+
+.login-btn {
+    font-size: 1rem;
+    margin-left: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    min-height: calc(100vh - 7.25rem);
+}
+
+.material-icons {
+    user-select: none;
+}
