@@ -18,13 +18,14 @@ body {
 
 header, footer {
     background-color: clr.$standout;
-    padding: 1rem 2rem;
+    padding: .6rem 1rem;
     display: flex;
     align-items: center;
 }
 
 footer {
     margin-top: auto;
+    padding: 1rem;
     justify-content: center;
     
     > p {
@@ -33,7 +34,7 @@ footer {
 }
 
 img.logo {
-    height: 2.5rem;
+    height: 2rem;
     margin-right: 1.5rem
 }
 

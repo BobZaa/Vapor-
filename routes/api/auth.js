@@ -12,7 +12,7 @@ const log = getLogger("  Auth  ", "red")
 
 /**
  * This route handles registering a user.
- * It error ahdnles:
+ * It error handles:
  * 1. Missing parts of the request.
  * 2. Password and passwordRepeat not matching.
  * 3. Username already existing in database.
@@ -69,13 +69,13 @@ auth.post(
             { expiresIn: '4h' }
         )
 
-        const fourHours = 60 * 60 * 1000
+        const fourHoursInMillis = 60 * 60 * 1000
         res.cookie(
             'api-token', token,
             {
-                expires: new Date(Date.now() + fourHours),
+                expires: new Date(Date.now() + fourHoursInMillis),
                 httpOnly: true,
-                signed: true 
+                signed: true
             }
         ).redirect('/')
     }
