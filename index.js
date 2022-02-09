@@ -18,7 +18,7 @@ const log = getLogger("  MAIN  ", "green")
 log("Starting up the server...")
 
 getEnv()
-await databaseSetup()
+;( process.env.DEBUG && process.env.NO_DB ) || await databaseSetup()
 
 nunjucks.configure(
     'views',
